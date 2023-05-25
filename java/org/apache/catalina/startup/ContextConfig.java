@@ -779,6 +779,7 @@ public class ContextConfig implements LifecycleListener {
         }
 
         webConfig();
+        // 加上jsp解析引擎,否则启动报错
         context.addServletContainerInitializer(new JasperInitializer(),null);
         if (!context.getIgnoreAnnotations()) {
             applicationAnnotationsConfig();
